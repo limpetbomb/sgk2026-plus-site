@@ -2138,8 +2138,103 @@ main {
 }
 
 .hero .cta-row {
+  position: relative;
   justify-content: center;
   margin-top: clamp(24px, 4vw, 42px);
+}
+
+.cta-mascot {
+  position: absolute;
+  top: 50%;
+  width: clamp(72px, 10vw, 116px);
+  height: auto;
+  pointer-events: none;
+  z-index: 2;
+  filter: drop-shadow(0 10px 12px rgba(31, 49, 146, .16));
+}
+
+.cta-mascot-left {
+  right: calc(50% + clamp(92px, 14vw, 150px));
+  transform: translateY(-58%) rotate(-8deg);
+  animation: ctaMascotLeft 4.8s ease-in-out infinite;
+}
+
+.cta-mascot-right {
+  left: calc(50% + clamp(92px, 14vw, 150px));
+  transform: translateY(-42%) rotate(7deg);
+  animation: ctaMascotRight 5.2s ease-in-out infinite;
+}
+
+.cta-triangle {
+  position: absolute;
+  z-index: 1;
+  width: clamp(12px, 1.9vw, 20px);
+  aspect-ratio: 1;
+  pointer-events: none;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  filter: drop-shadow(0 2px 0 var(--ink));
+}
+
+.tri-a {
+  right: calc(50% + clamp(214px, 25vw, 292px));
+  top: 2%;
+  background: var(--yellow);
+  transform: rotate(-18deg);
+  animation: ctaTriA 4.6s ease-in-out infinite;
+}
+
+.tri-b {
+  right: calc(50% + clamp(190px, 23vw, 258px));
+  bottom: -14%;
+  background: #48bfe8;
+  transform: rotate(28deg);
+  animation: ctaTriB 5.4s ease-in-out infinite;
+}
+
+.tri-c {
+  left: calc(50% + clamp(210px, 25vw, 286px));
+  top: 8%;
+  background: #48bfe8;
+  transform: rotate(36deg);
+  animation: ctaTriC 5s ease-in-out infinite;
+}
+
+.tri-d {
+  left: calc(50% + clamp(188px, 23vw, 254px));
+  bottom: -10%;
+  background: var(--yellow);
+  transform: rotate(-32deg);
+  animation: ctaTriD 4.9s ease-in-out infinite;
+}
+
+@keyframes ctaMascotLeft {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: 0 -10px; rotate: 5deg; }
+}
+
+@keyframes ctaMascotRight {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: 0 12px; rotate: -5deg; }
+}
+
+@keyframes ctaTriA {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: -4px -9px; rotate: 18deg; }
+}
+
+@keyframes ctaTriB {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: 5px 8px; rotate: -22deg; }
+}
+
+@keyframes ctaTriC {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: 4px -8px; rotate: -18deg; }
+}
+
+@keyframes ctaTriD {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: -5px 7px; rotate: 24deg; }
 }
 
 @media (max-width: 900px) {
@@ -2314,6 +2409,54 @@ main {
 .memo-paper .memo-main {
   font-weight: 800;
   letter-spacing: .14em;
+}
+
+.memo-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: clamp(24px, 4vw, 38px);
+}
+
+.memo-link-button {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  min-width: min(220px, 100%);
+  min-height: 58px;
+  padding: 10px 24px 11px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  line-height: 1.2;
+  box-shadow: 5px 5px 0 rgba(31, 49, 146, .18);
+}
+
+.memo-link-button span {
+  font-family: var(--font-heading-en);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.memo-link-button small {
+  margin-top: 4px;
+  font-size: .56rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.info-action {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(4px, 1.5vw, 14px);
+  padding-bottom: clamp(8px, 2vw, 18px);
+}
+
+.info-action .memo-link-button {
+  min-width: min(220px, 100%);
 }
 
 .news-strip,
@@ -2590,6 +2733,77 @@ main {
 .join-page .join-guide {
   max-width: 1040px;
   margin-inline: auto;
+}
+
+.reference-link a {
+  color: var(--blue-deep);
+  border-bottom: 2px solid var(--yellow);
+  font-weight: 800;
+}
+
+.join-caution {
+  padding: 18px 20px;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: rgba(245, 238, 109, .42);
+}
+
+.logo-download {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  max-width: 1040px;
+  margin: clamp(22px, 4vw, 38px) auto 0;
+  padding: clamp(22px, 4vw, 42px);
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background: #fff;
+  text-align: center;
+}
+
+.logo-download h2 {
+  margin: 0;
+}
+
+.logo-download p {
+  max-width: 760px;
+  margin: 0;
+}
+
+.logo-download-preview {
+  width: min(420px, 100%);
+  padding: 22px;
+  border: 2px dashed var(--ink);
+  border-radius: 18px;
+  background: rgba(144, 215, 236, .16);
+}
+
+.logo-download-preview img {
+  width: 100%;
+  height: auto;
+}
+
+.logo-rules {
+  display: grid;
+  gap: 8px;
+  max-width: 820px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.logo-rules li {
+  position: relative;
+  padding-left: 1.2em;
+  font-size: .9rem;
+  line-height: 1.8;
+}
+
+.logo-rules li::before {
+  content: "※";
+  position: absolute;
+  left: 0;
 }
 
 .notice-section .guide-links {
@@ -3124,6 +3338,24 @@ main {
     letter-spacing: .04em;
   }
 
+  .join-caution {
+    padding: 14px;
+  }
+
+  .logo-download {
+    gap: 12px;
+    padding: 20px 16px;
+  }
+
+  .logo-download-preview {
+    padding: 14px;
+  }
+
+  .logo-rules li {
+    font-size: .78rem;
+    line-height: 1.65;
+  }
+
   .notice-panel.with-sd .info-list {
     overflow: visible;
   }
@@ -3209,6 +3441,67 @@ main {
     line-height: 1.75;
   }
 
+  .cta-mascot {
+    width: clamp(54px, 18vw, 78px);
+  }
+
+  .cta-mascot-left {
+    right: calc(50% + 92px);
+    transform: translateY(-64%) rotate(-8deg);
+  }
+
+  .cta-mascot-right {
+    left: calc(50% + 92px);
+    transform: translateY(-32%) rotate(7deg);
+  }
+
+  .cta-triangle {
+    width: 11px;
+  }
+
+  .tri-a {
+    right: calc(50% + 142px);
+    top: -6px;
+  }
+
+  .tri-b {
+    right: calc(50% + 132px);
+    bottom: -18px;
+  }
+
+  .tri-c {
+    left: calc(50% + 142px);
+    top: -2px;
+  }
+
+  .tri-d {
+    left: calc(50% + 132px);
+    bottom: -16px;
+  }
+
+  .memo-links {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .memo-link-button {
+    flex: 1 1 138px;
+    min-width: 0;
+    min-height: 52px;
+    padding: 9px 12px 10px;
+    box-shadow: 4px 4px 0 rgba(31, 49, 146, .18);
+  }
+
+  .memo-link-button span {
+    font-size: .82rem;
+    letter-spacing: .04em;
+  }
+
+  .memo-link-button small {
+    font-size: .5rem;
+    letter-spacing: .02em;
+  }
+
   .news-item,
   .join-box p,
   .join-box li,
@@ -3235,5 +3528,89 @@ main {
 
   .notice-panel.with-sd .info-list dd {
     text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-head.image-head {
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 22px;
+    text-align: center;
+  }
+
+  .section-head.image-head .button {
+    align-self: center;
+  }
+
+  .news-item {
+    grid-template-columns: 110px 1fr;
+    gap: 12px;
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .news-strip {
+    padding-top: 30px;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 3px;
+    padding: 15px 14px;
+    text-align: center;
+  }
+}
+
+.news-strip .section-head.image-head {
+  position: static;
+}
+
+.news-strip .section-head.image-head .button.small {
+  position: absolute;
+  top: 0;
+  right: clamp(18px, 4vw, 44px);
+  z-index: 3;
+  isolation: isolate;
+  min-width: 76px;
+  min-height: 88px;
+  padding: 18px 14px 28px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+  font-weight: 800;
+  letter-spacing: .04em;
+  transform: none;
+}
+
+.news-strip .section-head.image-head .button.small::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--blue-deep);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 22px), 0 100%);
+}
+
+.news-strip .section-head.image-head .button.small::after {
+  content: none;
+}
+
+.news-strip .section-head.image-head .button.small:hover {
+  transform: translateY(2px);
+}
+
+@media (max-width: 640px) {
+  .news-strip .section-head.image-head .button.small {
+    right: 12px;
+    min-width: 62px;
+    min-height: 72px;
+    padding: 13px 10px 24px;
+    font-size: .7rem;
   }
 }
