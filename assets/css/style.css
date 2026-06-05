@@ -2347,6 +2347,7 @@ main {
 
 .notice-section {
   padding-top: clamp(76px, 7vw, 110px);
+  padding-inline: 0;
 }
 
 .section-head.image-head,
@@ -2627,7 +2628,7 @@ main {
   position: relative;
   overflow: visible;
   padding: clamp(24px, 4vw, 44px) clamp(28px, 5vw, 64px);
-  border-radius: 26px !important;
+  border-radius: 18px !important;
 }
 
 .notice-panel.with-sd::before {
@@ -2713,7 +2714,7 @@ main {
   .news-strip,
   .notice-section,
   .x-area {
-    padding: 34px 18px;
+    padding: 34px 4px;
   }
 
   .notice-section {
@@ -2721,7 +2722,7 @@ main {
   }
 
   .notice-section .line-object {
-    left: 18px;
+    left: 4px;
   }
 
   .circle-row {
@@ -2778,7 +2779,7 @@ main {
 
   .join-guide {
     grid-template-columns: 1fr;
-    width: calc(100% - 28px);
+    width: 100%;
     margin-inline: auto;
     padding: 18px;
   }
@@ -2789,7 +2790,7 @@ main {
 
   .notice-section .guide-links {
     grid-template-columns: 1fr;
-    max-width: 360px;
+    max-width: none;
   }
 
   .notice-section .guide-card {
@@ -2797,7 +2798,7 @@ main {
   }
 
   .notice-panel.with-sd {
-    padding: 26px 18px 74px;
+    padding: 26px 12px 74px;
   }
 
   .notice-panel.with-sd .info-list {
@@ -2808,10 +2809,12 @@ main {
     grid-template-columns: 1fr;
     gap: 16px;
     min-height: auto;
+    justify-items: center;
+    text-align: center;
   }
 
   .notice-panel.with-sd .info-list dt {
-    justify-self: start;
+    justify-self: center;
     min-width: 170px;
     margin-left: 0;
   }
@@ -3127,10 +3130,10 @@ main {
 
   .notice-panel.with-sd .info-list dt {
     min-width: 92px;
-    margin-left: -34px;
+    margin-left: 0;
     padding: 5px 13px 6px;
     font-size: .72rem;
-    transform: rotate(-3deg);
+    transform: rotate(-2deg);
   }
 }
 
@@ -3176,5 +3179,61 @@ main {
   .about-note {
     width: calc(100% - 28px);
     padding: 18px;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .memo-paper {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .memo-paper p {
+    font-size: .86rem;
+    line-height: 1.78;
+    letter-spacing: .04em;
+  }
+
+  .memo-paper p + p {
+    margin-top: 16px;
+  }
+
+  .memo-paper .memo-main {
+    font-size: .94rem;
+    letter-spacing: .06em;
+    line-height: 1.75;
+  }
+
+  .news-item,
+  .join-box p,
+  .join-box li,
+  .notice-panel.with-sd .info-list dd,
+  .circle-preview-footer p,
+  .guide-card span,
+  .x-area p,
+  .section p,
+  .about-note p {
+    font-size: .82rem;
+    line-height: 1.68;
+    letter-spacing: .03em;
+  }
+
+  .notice-panel.with-sd .info-list dt,
+  .join-label,
+  .circle-row.is-sample span::before {
+    letter-spacing: .06em;
+  }
+
+  .notice-panel.with-sd .info-list dt {
+    min-width: 126px;
+  }
+
+  .notice-panel.with-sd .info-list dd {
+    text-align: center;
   }
 }
