@@ -1531,18 +1531,23 @@ img {
 }
 
 .page-hero {
+  display: grid;
+  justify-items: center;
   width: min(var(--max), calc(100% - 32px));
   margin: 0 auto;
   padding: clamp(64px, 9vw, 112px) 0 var(--space);
+  text-align: center;
 }
 
 .page-hero::after {
-  content: "";
-  display: block;
-  width: min(260px, 70vw);
-  height: 8px;
-  margin-top: 22px;
-  background: linear-gradient(90deg, var(--blue), var(--yellow));
+  display: none;
+}
+
+.page-hero p {
+  max-width: 760px;
+  margin-inline: auto;
+  color: var(--ink) !important;
+  text-align: center;
 }
 
 .detail-card,
@@ -2626,6 +2631,24 @@ main {
   letter-spacing: .08em;
 }
 
+.circle-detail-button {
+  flex-direction: column;
+  gap: 2px;
+  min-height: 64px;
+  padding: 12px 28px 13px;
+  line-height: 1.25;
+}
+
+.circle-detail-button span {
+  font-weight: 900;
+}
+
+.circle-detail-button small {
+  font-size: .56rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
 .circle-space {
   font-family: var(--font-heading-en);
   font-weight: 700;
@@ -2779,6 +2802,25 @@ main {
   line-height: 1.5;
 }
 
+.flow-anchor-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .28em;
+  margin-inline: .1em;
+  padding: .02em .18em .06em;
+  background: rgba(144, 215, 236, .42);
+  color: var(--ink);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.flow-anchor-link::after {
+  content: "→";
+  font-family: var(--font-heading-en);
+  font-size: .9em;
+  line-height: 1;
+}
+
 .marker-yellow {
   display: inline;
   padding: .04em .18em .08em;
@@ -2845,6 +2887,183 @@ main {
   line-height: 1.7;
   letter-spacing: .04em;
   text-align: center;
+}
+
+.circle-apply-flow {
+  max-width: 1040px;
+  margin: clamp(26px, 4vw, 42px) auto 0;
+  padding: clamp(24px, 4vw, 42px);
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .86);
+}
+
+.circle-apply-flow h2 {
+  margin: 10px 0 clamp(24px, 4vw, 38px);
+  text-align: center;
+}
+
+.circle-apply-flow .join-label {
+  margin-inline: auto;
+}
+
+.apply-flow-list {
+  display: grid;
+  gap: 0;
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.apply-flow-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 20px;
+  padding: 0 0 clamp(26px, 4vw, 38px);
+}
+
+.apply-flow-step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 58px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--ink) 58%, transparent 0);
+  background-size: 2px 9px;
+}
+
+.apply-flow-number {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  aspect-ratio: 1;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--font-heading-en);
+  font-size: 1.35rem;
+  font-weight: 900;
+  box-shadow: 5px 5px 0 rgba(31, 49, 146, .16);
+}
+
+.apply-flow-body {
+  padding: 2px 0 0;
+}
+
+.apply-flow-body h3 {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 4px 0;
+  border-bottom: 3px solid var(--yellow);
+  font-size: clamp(1.05rem, 2vw, 1.28rem);
+  line-height: 1.45;
+}
+
+.apply-flow-body p {
+  margin: 0 0 10px;
+  font-size: .88rem;
+  line-height: 1.78;
+  letter-spacing: .04em;
+}
+
+.apply-flow-body p:last-child {
+  margin-bottom: 0;
+}
+
+.apply-flow-body a:not(.button) {
+  border-bottom: 2px solid var(--yellow);
+  font-weight: 900;
+}
+
+.apply-flow-body a.plain-link {
+  border-bottom: 0;
+  text-decoration: none;
+}
+
+.apply-flow-body strong {
+  padding: .04em .2em .08em;
+  background: var(--yellow);
+  font-weight: 900;
+}
+
+.apply-flow-body small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(31, 49, 146, .76);
+  font-size: .64rem;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.flow-deadline {
+  width: fit-content;
+  margin-top: 14px !important;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(144, 215, 236, .38);
+  font-family: var(--font-heading-ja);
+  font-weight: 900;
+}
+
+.flow-join-button {
+  position: relative;
+  gap: 14px;
+  min-height: 54px;
+  margin-top: 16px;
+  padding: 13px 22px 13px 28px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--ink);
+  box-shadow: 6px 6px 0 rgba(31, 49, 146, .20);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  transform: rotate(-1deg);
+}
+
+.flow-join-button::after {
+  content: "→";
+  display: grid;
+  place-items: center;
+  width: 32px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-heading-en);
+  font-size: .96rem;
+  line-height: 1;
+}
+
+.flow-join-button::before {
+  content: "JOIN";
+  position: absolute;
+  top: -15px;
+  left: 24px;
+  padding: 3px 10px 4px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink);
+  font-family: var(--font-heading-en);
+  font-size: .58rem;
+  font-weight: 900;
+  letter-spacing: .18em;
+}
+
+.flow-join-button.is-disabled {
+  cursor: default;
+}
+
+.flow-join-button:hover {
+  box-shadow: 3px 3px 0 rgba(31, 49, 146, .22);
+  transform: translate(3px, 3px) rotate(0deg);
 }
 
 .logo-download {
@@ -3719,6 +3938,62 @@ main {
   .join-eligible {
     margin: 14px 0;
     padding: 12px;
+  }
+
+  .circle-apply-flow {
+    margin-top: 20px;
+    padding: 22px 18px 24px;
+  }
+
+  .circle-apply-flow h2 {
+    margin-bottom: 22px;
+    font-size: 1.32rem;
+    line-height: 1.35;
+  }
+
+  .apply-flow-step {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 13px;
+    padding-bottom: 26px;
+  }
+
+  .apply-flow-step:not(:last-child)::before {
+    left: 21px;
+    top: 44px;
+  }
+
+  .apply-flow-number {
+    width: 44px;
+    font-size: 1.05rem;
+    box-shadow: 4px 4px 0 rgba(31, 49, 146, .14);
+  }
+
+  .apply-flow-body h3 {
+    margin-bottom: 9px;
+    font-size: .98rem;
+  }
+
+  .apply-flow-body p {
+    font-size: .74rem;
+    line-height: 1.72;
+    letter-spacing: .03em;
+  }
+
+  .apply-flow-body small {
+    font-size: .56rem;
+  }
+
+  .flow-deadline {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: .68rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .flow-join-button {
+    min-height: 50px;
+    padding: 12px 18px 12px 24px;
+    font-size: .88rem;
   }
 
   .join-caution {
