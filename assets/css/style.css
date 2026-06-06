@@ -4176,3 +4176,87 @@ main {
   letter-spacing: .06em;
   line-height: 1.6;
 }
+
+@media (max-width: 900px) {
+  .hero-character {
+    mix-blend-mode: normal !important;
+    opacity: .62;
+  }
+
+  .hero-takeru {
+    left: -42px;
+    top: 142px;
+  }
+
+  .hero-daisuke {
+    right: -42px;
+    top: 142px;
+    bottom: auto;
+  }
+
+  .news-list {
+    gap: 0;
+    padding-inline: 10px;
+  }
+
+  .news-item {
+    grid-template-columns: 96px minmax(0, 1fr) !important;
+    justify-items: stretch;
+    gap: 12px;
+    padding: 14px 2px;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    background-image: var(--dot-border-soft) !important;
+    background-position: left bottom !important;
+    background-size: 5px 2px !important;
+    background-repeat: repeat-x !important;
+    text-align: left;
+  }
+
+  .news-item time {
+    justify-self: start;
+    font-size: .78rem;
+    font-weight: 900;
+  }
+
+  .news-item span {
+    justify-self: start;
+    font-size: .78rem;
+    line-height: 1.55;
+  }
+
+  .join-monster {
+    mix-blend-mode: normal !important;
+    opacity: 1;
+    filter: drop-shadow(0 10px 14px rgba(31, 49, 146, .14));
+  }
+
+  .join-monster-right {
+    right: 12px;
+    bottom: 28px;
+  }
+
+  .join-monster-left {
+    right: 10px;
+    top: 166px;
+  }
+
+  .plan-character {
+    mix-blend-mode: normal !important;
+    opacity: .8;
+    width: clamp(132px, 36vw, 168px);
+  }
+
+  .plan-character-left {
+    left: 14px;
+  }
+
+  .plan-character-right {
+    right: 14px;
+  }
+
+  #join {
+    overflow: visible;
+  }
+}
