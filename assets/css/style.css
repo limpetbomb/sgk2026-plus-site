@@ -291,6 +291,7 @@ main::selection {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -301,6 +302,7 @@ body {
   line-height: 2;
   letter-spacing: 0;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 body * {
@@ -4718,6 +4720,7 @@ body {
     calc(50% + 600px) 6120px,
     calc(50% - 840px) 6860px,
     calc(50% + 630px) 7580px;
+  background-attachment: fixed;
 }
 
 @media (max-width: 1180px) {
@@ -4748,5 +4751,19 @@ body {
       calc(100% + 82px) 6320px,
       -210px 7060px,
       calc(100% + 92px) 7780px;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    background-image: none !important;
+    background-attachment: scroll;
+  }
+
+  .site-header,
+  main,
+  .site-footer {
+    width: 100%;
+    max-width: 100%;
   }
 }
