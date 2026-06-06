@@ -5,29 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SGK＋ | タケ大有志プチオンリー</title>
   <meta name="description" content="2026年12月20日（日）東京ビッグサイト開催、タケ大有志プチオンリー「SGK＋」告知サイト。">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260606-21">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="SGK＋ トップへ">
+    <a class="brand" href="index.html#top" aria-label="SGK＋ トップへ">
       <span class="brand-mark">＋</span><span>SGK</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="メニューを開く">
       MENU
     </button>
     <nav class="site-nav" id="site-nav">
-      <a href="index.html">TOP</a>
-      <a href="about.html">概要</a>
-      <a href="join.html">参加方法</a>
+      <a href="index.html#top">TOP</a>
+      <a href="index.html#about">概要</a>
+      <a href="index.html#join">参加方法</a>
       <a href="circles.html">サークル</a>
-      <a href="plans.html">当日企画</a>
-      <a href="news.html">お知らせ</a>
-      <a href="contact.html">問い合わせ</a>
+      <a href="index.html#plans">当日企画</a>
+      <a href="index.html#news">お知らせ</a>
+      <a href="index.html#contact">問い合わせ</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="top">
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="motion-parts hero-parts" aria-hidden="true">
         <span class="deco deco-ticket parallax" data-speed="0.16">12.20</span>
@@ -43,9 +43,9 @@
           <p><span>会場</span><b>DOZEN ROSE FES 2026<br><em>in 東京ビックサイト</em></b></p>
         </div>
         <div class="cta-row">
-          <img class="cta-mascot cta-mascot-left" src="assets/images/daisuke-wataru.png" alt="" aria-hidden="true">
-          <a class="button primary" href="join.html">参加する！</a>
-          <img class="cta-mascot cta-mascot-right" src="assets/images/takeru-wataru.png" alt="" aria-hidden="true">
+          <img class="cta-mascot cta-mascot-left" src="assets/images/takeru-wataru.png" alt="" aria-hidden="true">
+          <a class="button primary" href="#join">参加する！</a>
+          <img class="cta-mascot cta-mascot-right" src="assets/images/daisuke-wataru.png" alt="" aria-hidden="true">
           <span class="cta-triangle tri-a" aria-hidden="true"></span>
           <span class="cta-triangle tri-b" aria-hidden="true"></span>
           <span class="cta-triangle tri-c" aria-hidden="true"></span>
@@ -75,7 +75,7 @@
             <span>SNS</span>
             <small>企画SNSアカウント</small>
           </a>
-          <a class="memo-link-button" href="#">
+          <a class="memo-link-button" href="https://www.akaboo.jp/event/item/20207756.html">
             <span>Event page</span>
             <small>公式イベントページ</small>
           </a>
@@ -83,19 +83,18 @@
       </div>
     </section>
 
-    <section class="news-strip section reveal reveal-card">
+    <section class="news-strip section reveal reveal-card" id="news">
       <div class="section-head image-head">
         <img src="assets/images/heading-news-user.webp" alt="news お知らせ">
-        <a class="button small" href="news.html">一覧へ</a>
       </div>
       <div class="news-list">
-        <a href="news.html" class="news-item"><time>2026.06.05</time><span>告知サイトの仮デザインを制作中です</span></a>
-        <a href="news.html" class="news-item"><time>準備中</time><span>公式Xアカウントを開設予定です</span></a>
-        <a href="news.html" class="news-item"><time>準備中</time><span>参加表明フォーム公開予定</span></a>
+        <a href="#news" class="news-item"><time>2026.06.05</time><span>告知サイトの仮デザインを制作中です</span></a>
+        <a href="#news" class="news-item"><time>準備中</time><span>公式Xアカウントを開設予定です</span></a>
+        <a href="#news" class="news-item"><time>準備中</time><span>参加表明フォーム公開予定</span></a>
       </div>
     </section>
 
-    <section class="notice-section">
+    <section class="notice-section" id="about">
       <div class="line-object object-label" aria-hidden="true">EVENT REPORT</div>
       <div class="motion-parts section-parts" aria-hidden="true">
         <span class="deco deco-frame parallax" data-speed="0.1"></span>
@@ -124,7 +123,7 @@
       </div>
     </section>
 
-    <section class="notice-section blue">
+    <section class="notice-section blue" id="join">
       <div class="line-object object-corner" aria-hidden="true">JOIN FLOW</div>
       <div class="motion-parts section-parts join-parts" aria-hidden="true">
         <span class="deco deco-ribbon parallax" data-speed="0.14"></span>
@@ -133,31 +132,50 @@
       <div class="notice-title reveal reveal-title">
         <img src="assets/images/heading-join-user.webp" alt="how to join 参加方法">
       </div>
+      <img class="join-monster join-monster-left" src="assets/images/vmon-float-v2.png" alt="" aria-hidden="true">
+      <img class="join-monster join-monster-right" src="assets/images/patamon-float-v2.png" alt="" aria-hidden="true">
       <div class="join-guide reveal reveal-card">
         <article class="join-box">
           <p class="join-label">GENERAL</p>
-          <h3>一般参加</h3>
-          <p>事前の申請等は必要ありません。同人イベント及び二次創作をご理解の上でご来場ください。</p>
-          <ul>
-            <li>親イベントの入場方法・会場ルールをご確認ください</li>
-            <li>参考：Akaboo公式ガイド</li>
-          </ul>
+          <h2>一般参加</h2>
+          <p>事前の申請等は必要ありません。</p>
+          <p>同人イベント及び二次創作をご理解の上でご来場ください。</p>
+          <p class="reference-link">参考：<a href="https://www.akaboo.jp/guide/item/p0003.html" target="_blank" rel="noopener">Akaboo公式ガイド</a></p>
         </article>
         <article class="join-box">
           <p class="join-label">CIRCLE</p>
-          <h3>サークル参加</h3>
-          <p>以下の条件を満たしているサークル様であれば、どなたでもご参加いただけます。</p>
-          <ol>
-            <li>DRF2026内「希望を駆ける白き翼 DR2026」でタケ大スペース申込済</li>
-            <li>当日タケ大の頒布物を1種類以上頒布できること</li>
-            <li>開催日まで連絡可能なメールアドレスがあること</li>
-          </ol>
+          <h2>サークル参加</h2>
+          <div class="join-flow-list">
+            <div><b>01</b><span>DOZEN ROSE FES 2026 内「希望を駆ける白き翼 DR2026」で「<em class="marker-yellow">高石タケル×本宮大輔</em>」スペースで申し込みを完了していること</span></div>
+            <div><b>02</b><span>イベント当日「高石タケル×本宮大輔」の頒布物を1種類以上頒布できること<small>※新刊・既刊問いません</small></span></div>
+            <div><b>03</b><span>イベント開催日まで連絡可能なメールアドレスがあること<small>※DMでの対応は致しかねます</small></span></div>
+          </div>
+          <p class="join-eligible">以上の条件を満たしているサークル様であれば、どなたでもご参加いただけます。</p>
+          <div class="join-note">
+            <h3>頒布物について</h3>
+            <p>「高石タケル×本宮大輔」の作品が頒布されている場合は同作品の他カップリング、他ジャンル作品等の頒布は禁止しません。</p>
+            <p>ただしあくまでも「高石タケル×本宮大輔」のプチオンリーである点に留意していただき、お品書きに明記していただく等ご配慮をお願いします。</p>
+          </div>
         </article>
+        <p class="join-caution">当プチオンリーは、参加者同士のトラブルや規約違反、またそれにより生じた損害について、一切の責任を負いかねます。</p>
       </div>
-      <div class="center-cta reveal"><a class="button primary" href="join.html">詳しい参加方法へ</a></div>
+      <section class="logo-download reveal reveal-card">
+        <p class="join-label">LOGO DOWNLOAD</p>
+        <h2>プチオンリーロゴ配布</h2>
+        <p>サークルカット、無配ペーパーにのみご使用いただける<br>プチオンリーのタイトルロゴをご用意いたしました。<br>以下よりダウンロードしてご利用ください。</p>
+        <div class="logo-download-preview">
+          <img src="assets/images/sgkpluslogo.png" alt="SGK＋ ロゴ">
+        </div>
+        <a class="button primary" href="assets/images/sgkpluslogo.png" download>ロゴをダウンロード</a>
+        <ul class="logo-rules">
+          <li>サークルカット、無配ペーパーのみにご利用ください。同人誌、グッズへのご利用は不可ですのでご了承ください。</li>
+          <li>サークルカットへのロゴ表記は任意となっております。</li>
+          <li>拡大と縮小のみ可能です。加筆や切り貼り等はご遠慮ください。</li>
+        </ul>
+      </section>
     </section>
 
-    <section class="notice-section yellow">
+    <section class="notice-section yellow" id="circle-list">
       <div class="notice-title reveal reveal-title">
         <img src="assets/images/heading-circle-user.webp" alt="circle list サークル一覧">
       </div>
@@ -187,35 +205,49 @@
       </div>
     </section>
 
-    <section class="notice-section">
+    <section class="notice-section" id="plans">
       <div class="notice-title reveal reveal-title">
         <img src="assets/images/heading-plan-user.webp" alt="Plan on the day 当日企画">
       </div>
+      <img class="plan-character plan-character-left" src="assets/images/takeru-oketsu.png" alt="" aria-hidden="true">
+      <img class="plan-character plan-character-right" src="assets/images/daisuke-oketsu.png" alt="" aria-hidden="true">
       <div class="guide-links">
-        <a class="guide-card reveal reveal-pop" href="plans.html"><b>ペーパーラリー</b><span>詳細準備中</span></a>
-        <a class="guide-card reveal reveal-pop" href="plans.html"><b>共通POP</b><span>企画マーク配布予定</span></a>
-        <a class="guide-card reveal reveal-pop" href="plans.html"><b>記念企画</b><span>内容が決まり次第更新</span></a>
+        <a class="guide-card reveal reveal-pop" href="#plans"><b>ペーパーラリー</b><span>詳細準備中</span></a>
+        <a class="guide-card reveal reveal-pop" href="#plans"><b>共通POP</b><span>企画マーク配布予定</span></a>
+        <a class="guide-card reveal reveal-pop" href="#plans"><b>記念企画</b><span>内容が決まり次第更新</span></a>
       </div>
     </section>
 
-    <section class="x-area section reveal reveal-card" id="x">
-      <div>
-        <div class="notice-title contact-title">
-          <img src="assets/images/heading-contact-user.webp" alt="contact お問い合わせ">
+    <section class="x-area contact-form-section reveal reveal-card" id="contact">
+      <div class="contact-inner">
+        <div class="contact-heading">
+          <img src="assets/images/heading-contact-user.webp" alt="contact">
         </div>
-        <p>お問い合わせフォームは準備中です。</p>
-        <p>公開後、こちらにフォームURLと公式Xアカウントを掲載します。</p>
-        <div class="contact-actions">
-          <a class="button secondary" href="#" aria-disabled="true">フォーム準備中</a>
-          <a class="button secondary" href="#" aria-disabled="true">公式X準備中</a>
+        <div class="contact-lead">
+          <p>お問い合わせは以下フォームからお願いいたします。1週間以上連絡がない場合はお手数ですが再送をお願いします。お問い合わせの内容によってはご返信後、本サイトで個人情報を伏せた上で回答内容を公開させていただく場合がございます。</p>
         </div>
+        <form class="contact-form" action="mailto:sgkplus2026@gmail.com" method="post" enctype="text/plain">
+          <label>
+            <span>お名前</span>
+            <input type="text" name="お名前" placeholder="名前" required>
+          </label>
+          <label>
+            <span>メールアドレス</span>
+            <input type="email" name="メールアドレス" placeholder="sgkplus2026@gmail.com" required>
+          </label>
+          <label>
+            <span>お問い合わせ内容</span>
+            <textarea name="お問い合わせ内容" placeholder="お問い合わせ内容を記入してください" required></textarea>
+          </label>
+          <button type="submit">送信する <span aria-hidden="true">→</span></button>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>SGK＋ / タケ大有志プチオンリー</p>
-    <p>主催・協力：おけつ・わたる・りむこ</p>
+    <img class="footer-logo" src="assets/images/sgkpluslogo-shiro.png" alt="SGK＋">
+    <p class="footer-copy">© 2026 SGK＋/ タケ大有志プチオンリー</p>
   </footer>
 
   <script src="assets/js/main.js"></script>

@@ -4,21 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>サークル一覧 | SGK＋</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260606-21">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-mark">＋</span><span>SGK</span></a>
+    <a class="brand" href="index.html#top"><span class="brand-mark">＋</span><span>SGK</span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="site-nav" id="site-nav">
-      <a href="index.html">TOP</a>
-      <a href="about.html">概要</a><a href="join.html">参加方法</a><a href="circles.html">サークル</a><a href="plans.html">当日企画</a><a href="news.html">お知らせ</a><a href="contact.html">問い合わせ</a>
+      <a href="index.html#top">TOP</a>
+      <a href="index.html#about">概要</a><a href="index.html#join">参加方法</a><a href="circles.html">サークル</a><a href="index.html#plans">当日企画</a><a href="index.html#news">お知らせ</a><a href="index.html#contact">問い合わせ</a>
     </nav>
   </header>
   <main class="subpage">
     <section class="page-hero reveal">
-      <p class="eyebrow">CIRCLE</p>
-      <h1>サークル一覧</h1>
+      <h1 class="page-image-title"><img src="assets/images/heading-circle-user.webp" alt="circle list サークル一覧"></h1>
       <p>参加表明受付後、サークル情報をこちらに掲載します。</p>
     </section>
     <section class="section circle-section">
@@ -32,7 +31,7 @@
       <div class="circle-grid">
         <article class="circle-card reveal">
           <div class="circle-no">01</div>
-          <div class="circle-visual"><img src="assets/images/daisuke-sd.webp" alt=""></div>
+          <div class="circle-visual cut-template"><img src="assets/images/circle-cut-template.png" alt="サークルカットテンプレート"></div>
           <div class="circle-body">
             <p class="circle-space">東1 / A-00</p>
             <h2>サークル名</h2>
@@ -42,7 +41,7 @@
         </article>
         <article class="circle-card reveal">
           <div class="circle-no">02</div>
-          <div class="circle-visual yellow"><img src="assets/images/takeru-sd.webp" alt=""></div>
+          <div class="circle-visual cut-template"><img src="assets/images/circle-cut-template.png" alt="サークルカットテンプレート"></div>
           <div class="circle-body">
             <p class="circle-space">東1 / A-00</p>
             <h2>サークル名</h2>
@@ -50,20 +49,13 @@
             <div class="circle-tags"><span>小説</span><span>展示</span></div>
           </div>
         </article>
-        <article class="circle-card reveal is-coming">
-          <div class="circle-no">＋</div>
-          <div class="circle-visual"><img src="assets/images/partner-motifs.webp" alt=""></div>
-          <div class="circle-body">
-            <p class="circle-space">Coming Soon</p>
-            <h2>参加サークル受付後に公開</h2>
-            <p>募集開始後、サークル名・配置・SNS・頒布予定などを掲載します。</p>
-            <div class="circle-tags"><span>準備中</span></div>
-          </div>
-        </article>
         </div>
     </section>
   </main>
-  <footer class="site-footer"><p>SGK＋ / タケ大有志プチオンリー</p></footer>
+  <footer class="site-footer">
+    <img class="footer-logo" src="assets/images/sgkpluslogo-shiro.png" alt="SGK＋">
+    <p class="footer-copy">© 2026 SGK＋/ タケ大有志プチオンリー</p>
+  </footer>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
