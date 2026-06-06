@@ -3687,18 +3687,28 @@ main {
   }
 
   .join-flow-list div {
-    grid-template-columns: 42px 1fr;
-    gap: 10px;
-    padding: 10px 0;
+    grid-template-columns: 1fr;
+    gap: 6px;
+    padding: 12px 0;
   }
 
   .join-flow-list b {
-    font-size: .86rem;
+    width: fit-content;
+    min-width: 34px;
+    padding: 2px 9px 3px;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    background: #fff;
+    font-size: .72rem;
+    line-height: 1.2;
   }
 
   .join-flow-list span {
-    font-size: .82rem;
-    letter-spacing: .04em;
+    font-size: .78rem;
+    letter-spacing: .03em;
+    line-height: 1.68;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
   }
 
   .join-flow-list small {
@@ -4196,7 +4206,7 @@ main {
 
   .news-list {
     gap: 0;
-    padding-inline: 10px;
+    padding-inline: 6px;
   }
 
   .news-item {
@@ -4258,5 +4268,85 @@ main {
 
   #join {
     overflow: visible;
+  }
+
+  .join-flow-list div {
+    grid-template-columns: 1fr !important;
+    gap: 7px !important;
+    padding: 13px 0 !important;
+  }
+
+  .join-flow-list b {
+    justify-self: start;
+    width: fit-content;
+    min-width: 34px;
+    padding: 2px 9px 3px;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    background: #fff;
+    font-size: .78rem !important;
+    line-height: 1.2;
+  }
+
+  .join-flow-list span {
+    font-size: .86rem !important;
+    line-height: 1.72 !important;
+    letter-spacing: .03em !important;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  .logo-download h2 {
+    font-size: 1.55rem;
+    line-height: 1.35;
+  }
+
+  .logo-download p {
+    font-size: .82rem;
+    line-height: 1.7;
+    letter-spacing: .04em;
+  }
+
+  .logo-rules {
+    gap: 5px;
+  }
+
+  .logo-rules li {
+    font-size: .54rem !important;
+    line-height: 1.55 !important;
+    letter-spacing: .025em !important;
+  }
+
+  .notice-section .guide-links {
+    gap: 18px;
+  }
+
+  .notice-section .guide-card {
+    min-height: 122px;
+    padding: 22px 22px 24px;
+  }
+
+  .contact-form-section {
+    padding-inline: 28px !important;
+  }
+
+  .contact-lead p {
+    font-size: .66rem !important;
+    line-height: 1.7 !important;
+    letter-spacing: .025em !important;
+  }
+
+  .contact-form label span {
+    font-size: .9rem;
+  }
+
+  .contact-form input {
+    min-height: 58px;
+    font-size: .9rem;
+  }
+
+  .contact-form textarea {
+    min-height: 190px;
+    font-size: .9rem;
   }
 }
