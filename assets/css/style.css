@@ -1446,8 +1446,43 @@ img {
 }
 
 .news-list {
+  position: relative;
+  z-index: 2;
   display: grid;
   gap: 10px;
+}
+
+.news-float {
+  position: absolute;
+  z-index: 1;
+  width: clamp(86px, 12vw, 138px);
+  height: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 12px 16px rgba(31, 49, 146, .14));
+}
+
+.news-float-left {
+  left: clamp(-34px, -2vw, -12px);
+  top: clamp(54px, 7vw, 88px);
+  transform: rotate(-8deg);
+  animation: newsFloatLeft 6.2s ease-in-out infinite;
+}
+
+.news-float-right {
+  right: clamp(-32px, -2vw, -10px);
+  bottom: clamp(22px, 4vw, 46px);
+  transform: rotate(7deg);
+  animation: newsFloatRight 6.8s ease-in-out infinite;
+}
+
+@keyframes newsFloatLeft {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: 0 -12px; rotate: 3deg; }
+}
+
+@keyframes newsFloatRight {
+  0%, 100% { translate: 0 0; rotate: 0deg; }
+  50% { translate: 0 12px; rotate: -3deg; }
 }
 
 .news-item {
@@ -4214,6 +4249,21 @@ main {
 @media (max-width: 640px) {
   .news-strip {
     padding-top: 30px;
+  }
+
+  .news-float {
+    width: clamp(66px, 18vw, 88px);
+    opacity: .92;
+  }
+
+  .news-float-left {
+    left: -24px;
+    top: 54px;
+  }
+
+  .news-float-right {
+    right: -20px;
+    bottom: 20px;
   }
 
   .news-item {
