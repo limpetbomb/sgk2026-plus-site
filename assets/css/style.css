@@ -4797,11 +4797,20 @@ body {
 
 @media (max-width: 720px) {
   .hero {
-    padding: 0 12px 26px !important;
+    padding: 0 12px 58px !important;
+  }
+
+  .hero-inner {
+    margin-top: 0 !important;
   }
 
   .logo-title {
     width: min(96vw, 560px) !important;
+  }
+
+  .hero-character {
+    top: 12px !important;
+    bottom: auto !important;
   }
 
   .hero-event-info {
