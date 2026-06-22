@@ -3343,6 +3343,16 @@ main {
   overflow-wrap: anywhere;
 }
 
+.info-note {
+  display: block;
+  margin-top: 6px;
+  color: rgba(31, 49, 146, .72);
+  font-size: clamp(.58rem, 1vw, .7rem);
+  font-weight: 500;
+  letter-spacing: .04em;
+  line-height: 1.6;
+}
+
 .notice-panel.with-sd .panel-sd-right {
   right: clamp(-18px, -1vw, 8px);
   bottom: -34px;
@@ -4822,6 +4832,38 @@ body {
 }
 
 @media (max-width: 720px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+  }
+
+  .site-header,
+  main,
+  .site-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+    box-sizing: border-box;
+    transform: none !important;
+  }
+
+  main {
+    padding-inline: 8px !important;
+  }
+
+  .hero,
+  .quick-info,
+  .news-strip,
+  .notice-section,
+  .x-area {
+    width: 100% !important;
+    max-width: 100%;
+    margin-inline: auto !important;
+    box-sizing: border-box;
+  }
+
   .hero {
     padding: 0 12px 58px !important;
   }
@@ -4831,7 +4873,7 @@ body {
   }
 
   .logo-title {
-    width: min(96vw, 560px) !important;
+    width: min(100%, 560px) !important;
   }
 
   .hero-character {
