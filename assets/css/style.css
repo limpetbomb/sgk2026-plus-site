@@ -3799,6 +3799,32 @@ main {
   transform: translateY(-4px);
 }
 
+.contact-form button:disabled {
+  cursor: wait;
+  opacity: .72;
+  transform: none;
+}
+
+.contact-form-status {
+  min-height: 1.8em;
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-heading-ja);
+  font-size: clamp(.76rem, 1.5vw, .9rem);
+  font-weight: 700;
+  letter-spacing: .06em;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.contact-form-status.is-success {
+  color: var(--yellow);
+}
+
+.contact-form-status.is-error {
+  color: #fff;
+}
+
 /* Cute global menu */
 .site-nav {
   min-width: min(340px, calc(100vw - 34px));
@@ -4801,7 +4827,7 @@ body {
   }
 
   .hero-inner {
-    margin-top: 0 !important;
+    margin-top: 18px !important;
   }
 
   .logo-title {
@@ -4809,7 +4835,7 @@ body {
   }
 
   .hero-character {
-    top: 12px !important;
+    top: 30px !important;
     bottom: auto !important;
   }
 

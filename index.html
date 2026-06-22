@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SGK＋ | タケ大非公式応援企画</title>
   <meta name="description" content="2026年12月20日（日）東京ビッグサイト開催、タケ大非公式応援企画「SGK＋」告知サイト。">
-  <link rel="stylesheet" href="assets/css/style.css?v=20260622-47">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260622-48">
 </head>
 <body>
   <header class="site-header">
@@ -260,20 +260,22 @@
         <div class="contact-lead">
           <p>お問い合わせは以下フォームからお願いいたします。1週間以上連絡がない場合はお手数ですが再送をお願いします。お問い合わせの内容によってはご返信後、本サイトで個人情報を伏せた上で回答内容を公開させていただく場合がございます。</p>
         </div>
-        <form class="contact-form" action="mailto:2026sgkplus@gmail.com" method="post" enctype="text/plain">
+        <form class="contact-form" action="https://formspree.io/f/xykqyyvy" method="post">
+          <input type="hidden" name="_subject" value="SGK＋ サイトお問い合わせ">
           <label>
             <span>お名前</span>
-            <input type="text" name="お名前" placeholder="名前" required>
+            <input type="text" name="name" placeholder="名前" required>
           </label>
           <label>
             <span>メールアドレス</span>
-            <input type="email" name="メールアドレス" placeholder="2026sgkplus@gmail.com" required>
+            <input type="email" name="email" placeholder="2026sgkplus@gmail.com" required>
           </label>
           <label>
             <span>お問い合わせ内容</span>
-            <textarea name="お問い合わせ内容" placeholder="お問い合わせ内容を記入してください" required></textarea>
+            <textarea name="message" placeholder="お問い合わせ内容を記入してください" required></textarea>
           </label>
           <button type="submit">送信する <span aria-hidden="true">→</span></button>
+          <p class="contact-form-status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -284,6 +286,6 @@
     <p class="footer-copy">© 2026 SGK＋/ タケ大非公式応援企画</p>
   </footer>
 
-  <script src="assets/js/main.js?v=20260606-2"></script>
+  <script src="assets/js/main.js?v=20260622-3"></script>
 </body>
 </html>
