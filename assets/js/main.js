@@ -48,6 +48,29 @@ const updateParallax = () => {
 window.addEventListener("scroll", updateParallax, { passive: true });
 updateParallax();
 
+const registrationOpensAt = Date.parse("2026-08-03T00:00:00+09:00");
+const registrationFormUrl = "https://forms.gle/7Qdoqvvj4VWihCtK6";
+
+const openRegistration = () => {
+  document.querySelectorAll("[data-registration-cta]").forEach((link) => {
+    link.textContent = "参加する！";
+    link.setAttribute("href", registrationFormUrl);
+    link.setAttribute("target", "_blank");
+    link.setAttribute("rel", "noopener");
+    link.removeAttribute("aria-disabled");
+    link.removeAttribute("tabindex");
+    link.classList.remove("is-disabled");
+  });
+};
+
+const millisecondsUntilRegistration = registrationOpensAt - Date.now();
+
+if (millisecondsUntilRegistration <= 0) {
+  openRegistration();
+} else {
+  window.setTimeout(openRegistration, millisecondsUntilRegistration);
+}
+
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
