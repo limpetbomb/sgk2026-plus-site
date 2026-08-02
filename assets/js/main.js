@@ -61,6 +61,14 @@ const openRegistration = () => {
     link.removeAttribute("tabindex");
     link.classList.remove("is-disabled");
   });
+
+  document.querySelectorAll("[data-registration-news]").forEach((newsItem) => {
+    newsItem.querySelector("time").textContent = "2026.8.3";
+    newsItem.querySelector("span").textContent = "参加受付を開始しました";
+    newsItem.setAttribute("href", registrationFormUrl);
+    newsItem.setAttribute("target", "_blank");
+    newsItem.setAttribute("rel", "noopener");
+  });
 };
 
 const millisecondsUntilRegistration = registrationOpensAt - Date.now();
